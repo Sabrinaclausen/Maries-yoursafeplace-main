@@ -36,6 +36,16 @@ font-size: 14px;
 font-family: 'source sans pro', sans-serif;
 }
 
+.button {
+background-color: #C8BEDF;
+color: #1a1a1a; 
+font-family: 'playfair display', serif; 
+font-size: 12px;
+padding: 10px 30px;
+border-radius: 10px;
+border: 1px solid #6E6E6E; 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+}
 
 }
 
@@ -69,6 +79,10 @@ text-transform: uppercase;
 p{
 font-size: 14px;
 font-family: 'source sans pro', sans-serif;
+}
+
+.button {
+font-size: 15px;
 }
 
 }
