@@ -1,0 +1,103 @@
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.image-slider-wrapper {
+    position: relative;
+    margin: 40px 0 40px 0;
+}
+
+.image-slider-wrapper:before, .image-slider-wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-slider-wrapper:before {
+    left: 0;
+}
+
+.image-slider-wrapper:after {
+    right: 0;
+}
+
+.slider-event-images {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* skjuler scrollbar i Firefox */
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.slider-event-images::-webkit-scrollbar {
+    display: none; /* skjuler scrollbar i Chrome, Safari og Opera */
+}
+
+.slider-event-images.active {
+    cursor: grab;
+}
+
+.slider-event-image {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    user-select: none;
+    width: auto;
+    height: 300px;
+}
+
+.slider-event-image img {
+    pointer-events: none;
+    user-select: none;
+    border-radius: 20px;
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* sikrer at billedet dækker hele boksen uden at blive forvrænget */
+}
+
+.slider-event-image:last-child {
+    margin-right: 20px;
+}
+
+/* lille mobil */
+
+@media screen and (min-width: 320px) {
+    
+}
+
+
+@media screen and (min-width: 480px) {
+    
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .slider-event-image {
+        height: 400px;
+    }
+}
+
+/* laptop */
+
+@media screen and (min-width: 1200px) {
+    .slider-event-image {
+        height: 450px;
+    }
+
+    .image-slider-wrapper {
+    position: relative;
+    height: 300px;
+    margin: 100px 0 200px 0;
+}
+    
+}

@@ -1,0 +1,156 @@
+/*Slider*/
+.slideshow-container {
+  position: relative; /* til placering af arrows and dots */
+  width: 100%;
+  margin: 70px auto;
+  overflow: hidden; /* skjuler overflow */
+}
+
+/* anmeldelser - kort */
+.review-card {
+  position: relative; /* til placering af indhold */
+  display: none; /* skjuler alle kort som standard */
+  position: absolute; inset: 0; /* fylder hele containeren */
+}
+
+/* Vis kun første slide før JS tager over */
+.review-card:first-child {
+  display: block; 
+}
+
+/* Indhold på kortet */
+.review-content {
+  position: absolute; 
+  top: 50%; /* midt lodret */
+  left: 50%; /* midt horisontalt */
+  transform: translate(-50%, -50%); /* Sikre det er midt i */
+  width: 75%;
+  text-align: center;
+}
+
+/* Stjerner */
+.review-stars img {
+  width: 20px;
+  margin: 0 2px;
+}
+
+/* Anmelderens navn*/
+.review-name {
+  margin-bottom: 4px;
+}
+
+/* Anmelderens tekst */
+.review-text {
+  margin: 20px 20px 20px 30px;
+}
+
+/* hjerter viser hvilken side du er på*/
+.review-heart {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot-heart {
+  width: 16px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.dot-heart.active-heart {
+  opacity: 1;
+}
+
+/* Pil venstre */
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  left: 24px;
+  z-index: 5;
+  cursor: pointer; 
+}
+
+/* Pil højre */
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  right: 24px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+/* Billede til laptop */
+.cloud-laptop {
+  display: none;
+}
+
+/* Billede til mobil */
+.cloud-mobil {
+  display: block;
+}
+
+
+/*Mobil*/
+@media screen and (min-width: 400px) {
+
+  .cloud-laptop {
+  display: none;
+}
+
+.cloud-mobil {
+  display: block;
+  width: 100%;
+}
+
+}
+
+
+/*ipad*/
+@media screen and (min-width: 768px) {
+
+  .cloud-laptop {
+  display: block;
+  width: 100%;
+}
+
+.cloud-mobil {
+  display: none;
+}
+
+.images-slider-wrapper{
+  margin-bottom: 250px;
+}
+
+}
+
+
+
+/*Laptop*/
+@media screen and (min-width: 1200px) {
+
+.cloud-laptop {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+    
+.cloud-mobil {
+  display: none;
+}
+
+.review-content {
+  width: 40%;
+}
+
+.review-heart {
+  bottom: 130px;
+}
+
+}

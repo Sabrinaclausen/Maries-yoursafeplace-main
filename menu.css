@@ -1,0 +1,362 @@
+.menu-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto; /* centrer siden */
+}
+
+.menu-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 20;
+    color: #1a1a1a;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.mobile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mob-btn {
+    width: 120px;
+    height: auto;
+}
+
+.button a {
+    text-wrap: nowrap;
+    width: auto;
+}
+
+.mobile-buttons div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin: 7px 0; 
+}
+
+.back-btn {
+    position: fixed; /* følger skærmen */
+    right: 14px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* rund knap */
+    background: #ffffff;
+    border: 1px solid #4a4a4a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* øverst på siden */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    /* skjult tilstand */
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none; /* ikke klikbar når skjult */
+
+    transition: opacity .25s ease, transform .25s ease; /* glidende overgang */
+}
+
+.back-btn.visible {
+    opacity: 1; /* synlig */
+    transform: translateY(0); /* tilbage til synlig position */
+    pointer-events: auto; /* klikbar */
+}
+
+.back-btn img {
+    width: 30px;
+}
+
+.menu-section {
+    position: relative;
+    margin: 40px 0 80px;
+    z-index: 2;
+}
+
+.menu-box {
+    background: #FFFDF8;
+    padding: 40px 30px;
+    border-radius: 28px;
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+/* Titel i boks */
+.menu-box h2 {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+
+/* Sektion-ikoner (hjerter og kaffekopper) */
+.section-icons {
+    position: absolute;
+    top: -32px;                     /* kommer tættere på titlen */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 45px;                      /* hjerterne spredes meget mere ud */
+    z-index: 12; /* over menu-boks */
+    pointer-events: none;
+}
+
+.section-icons img {
+    width: 46px;                   
+    height: auto;
+}
+
+/* Variation — gør dem asymmetriske */
+.section-icons img:nth-child(1) {
+    transform: translateY(6px) rotate(-6deg); /* lidt ned og roteret */
+}
+
+.section-icons img:nth-child(2) {
+    transform: translateY(-8px) rotate(3deg) scale(1.05);
+}
+
+.section-icons img:nth-child(3) {
+    transform: translateY(4px) rotate(5deg);
+}
+
+.blobs-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* centrer baggrund */
+    width: 100vw; /* går helt ud til skærmens kanter */
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* klik går igennem */
+}
+
+.blobs-bg img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+}
+
+.blob-left { left: 0; }
+.blob-right { right: 0; }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px; /* afstand mellem items */
+}
+
+
+.item-group {
+    display: flex;
+    flex-direction: column; /* small-note kommer under */
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between; /* venstre tekst og pris */
+    align-items: center;
+    width: 100%; /* alle items samme bredde */
+    position: relative;
+    font-family: 'source sans 3', sans-serif;
+}
+
+/* Venstre tekstområde */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.2;
+}
+
+/* Ikoner ved siden af drikken */
+.left img {
+    height: 28px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+
+/* Dotted line */
+.item::before {
+    content: ""; /* prikkerne */    
+    position: absolute;
+    top: 60%; /* justerer prikkerne i linje */
+    left: 0;
+    right: 0;
+    border-bottom: 1px dotted #1a1a1a;
+    z-index: 1;
+}
+
+/* Overlapper dotted line */
+.left,
+.price {
+    position: relative;
+    z-index: 2;
+    background: #FFFDF8;
+    padding: 0 4px;
+}
+
+.small-note {
+    margin: 0;
+    padding-left: 4px;
+    font-size: 13px;
+    line-height: 1.3;
+    background: #FFFDF8;
+    z-index: 2;
+    position: relative; /* undgår at ramme prikket linje */
+}
+
+/* TILVALG */
+
+.tilvalg {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.tilvalg-grid {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* centreret */
+}
+
+.tilvalg-grid .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tilvalg-grid .price {
+    margin-left: auto;
+}
+
+.tilvalg-label {
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.tilvalg p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.allergener-box {
+    text-align: center;
+}
+
+.allergen-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.allergen-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.allergen-line h4 {
+    margin: 0;
+}
+
+.allergen-icon {
+    height: 26px;
+}
+
+/* MOBIL */
+
+@media screen and (max-width: 430px) {
+    .mob-btn {
+        width: 70px;
+        font-size: 8pt;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu-title,
+    .intro {
+        display: none; /* skjules på mobil */
+    }
+
+    .mobile-buttons,
+    .back-btn {
+        display: flex;
+    }
+
+    .mobile-buttons {
+        font-size: 15pt;
+        margin-top: 40px;
+    }
+
+    .blobs-bg img {
+        width: 30px; /* smallere blobs på mobil */
+        height: 100%;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    .mobile-buttons,
+    .back-btn {
+        display: none;
+    }
+
+    .menu-wrapper {
+        margin-top: 60px;
+    }
+}
+
+/* DESKTOP  */
+
+@media screen and (min-width: 1200px) {
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+        gap: 40px 60px;  
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-box {
+        padding: 55px 60px;
+        margin: 0 auto 90px;
+        max-width: 100%;
+    }
+
+    .allergener-box {
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+}

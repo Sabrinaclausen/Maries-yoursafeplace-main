@@ -1,0 +1,145 @@
+h2 {
+    margin: 0 0 10px 0;
+}
+
+.event-img-wrapper-1 {
+    width: 90%;
+    height: 400px;
+    overflow: hidden; /* skjuler det, der går ud over boksen */
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* afrunder hjørnerne - følger designmanualen */
+    object-fit: cover; /* sikrer at billedet dækker hele boksen uden at blive forvrænget */
+}
+
+.blue-heart {
+    margin: 0 2% 0 0;
+    width: 10px;
+    height: auto;
+}
+
+.underevents-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.underevents-container-text {
+    margin: 20px auto 20px auto;
+    line-height: 1.6;
+    width: 80%;
+}
+
+.underevents-left, 
+.underevents-left-2,
+.underevents-left-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.underevents-left {
+    text-align: left;
+    margin: 0 20%;
+    width: 60%;
+}
+
+.underevents-left div, 
+.underevents-left-3 div {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    margin: 5px 0 5px 10px;
+}
+
+.underevents-left p, 
+.underevents-left-3 p {
+    margin: 0;
+    text-align: left;
+}
+
+.event-liste {
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.event-liste-2  {
+    white-space: wrap;
+    margin: 0 10%;
+}
+
+.event-liste,
+.event-liste-2  {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.event-liste div, 
+.event-liste-2 div {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.book-button {
+    margin: 15px 0 0 0;
+    padding: 10px 30px;
+    z-index: 10;
+}
+
+/* lille mobil */
+
+@media screen and (max-width: 320px) {
+    
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .event-img-wrapper-1 {
+        width: 70%;
+        height: 500px;
+    }
+    
+    .underevents-container-text {
+        width: 60%;
+    }
+
+    .underevents-left, 
+    .underevents-left-2 {
+        width: 45%;
+    }
+
+    .underevents-left-3 {
+        margin: 0 auto;
+        width: fit-content;
+        white-space: nowrap;
+    }
+}
+
+/* laptop */
+
+@media screen and (min-width: 1200px) {
+    .event-img-wrapper-1 {
+        height: 700px;
+    }
+
+    .underevents-container-text {
+        width: 54%;
+    }
+
+    .underevents-left, 
+    .underevents-left-2{
+        width: 40%;
+    }
+
+}

@@ -1,0 +1,78 @@
+/* Container for hjerterne */
+.heart-wrapper {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Hjerterne */
+.heart {
+    position: absolute;
+    bottom: -40px;
+    width: 30px;    
+    animation: floatUp 6s linear infinite;
+}
+
+/* Animation forsinkelser for hjerterne */
+.heart:nth-child(1) { 
+    left: 0%; animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 10%; animation-delay: 1.5s;
+}
+
+.heart:nth-child(3) {
+    left: 20%; animation-delay: 0.7s;
+}
+
+.heart:nth-child(4){ 
+    left: 30%; animation-delay: 2.3s;
+}
+
+.heart:nth-child(5){ 
+    left: 40%; animation-delay: 1s;
+}
+
+.heart:nth-child(6){ 
+    left: 50%; animation-delay: 3s;
+}
+
+.heart:nth-child(7){ 
+    left: 60%; animation-delay: 0.4s;
+}
+
+.heart:nth-child(8){ 
+    left: 70%; animation-delay: 2.7s;
+}
+
+.heart:nth-child(9){ 
+    left: 80%; animation-delay: 1.9s;
+}
+
+.heart:nth-child(10){ 
+    left: 90%; animation-delay: 0.2s;
+}
+
+/* Animation keyframes */
+@keyframes floatUp {
+0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 0;
+}
+15% {
+    opacity: 1;
+}
+50% {
+    transform: translate(20px, -60vh) scale(1);
+}
+100% {
+    transform: translate(-15px, -120vh) scale(1.2);
+    opacity: 0;
+}
+
+}

@@ -1,30 +1,88 @@
 /* mobile-first design tiltænkt 360px-480px */
 
 body {
-margin: 0;
-padding: 0;
-background-color: #F8F0E2;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F0E2;
 }
 
 .button {
-display: inline-block;
-background-color: #C8BEDF;
-color: #1a1a1a; 
-font-family: 'playfair display', serif; 
-font-size: 16px;
-text-transform: uppercase;
-text-align: center;
-padding: 10px 30px;
-border-radius: 10px;
-border: 1px solid #6E6E6E; 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    background-color: #C8BEDF;
+    color: #1a1a1a; 
+    font-family: 'playfair display', serif; 
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #6E6E6E; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
 }
 
 .button:hover {
-cursor: pointer;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2, h3, h4, a {
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(200, 190, 223, 0.6);
+}
+
+/* --- Shine variables --- */
+:root {
+    --shine-degree: 120deg; /* Vinkel på shine-effekten */
+    --shine-color: rgba(255, 255, 255, 0.35); /* Farven på shine-effekten */
+    --shine-effect: linear-gradient(
+        var(--shine-degree), 
+        transparent,
+        var(--shine-color),
+        transparent
+    );
+    --shine-speed: 4s; /* Hvor lang tid shine-animationen tager */
+}
+
+.button-shine-btn {
+    overflow: hidden;
+}
+
+/* --- Shine Effekt --- */
+.button-shine-btn::before {
+    content: "";  /* Shine-laget */
+    position: absolute;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 100%;
+    background: var(--shine-effect); /* Anvender shine-gradienten */
+    animation: shine var(--shine-speed) ease-in-out infinite; /* Evig animation frem og tilbage */
+    z-index: 500;
+}
+
+/* Flytter shine-laget fra venstre til højre hen over knappen */
+@keyframes shine {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+/* Generelle styles */
+
+h1, h2, h3, h4, a, span {
 font-family: 'playfair display', serif;
 text-transform: uppercase;
 }
@@ -144,4 +202,568 @@ font-size: 16px;
     font-size: 18px;
     }
 
+}
+
+/*header general*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; /*Gør at headeren følger med ved scroll*/
+    top: 0;
+    z-index: 1000; 
+}
+
+/*burger menu*/
+#burgericon {
+    display: block;
+    width: 50px;
+    height: auto; /*Bevarer proportionerne*/
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 1100;
+    cursor: pointer; /*Gør at cursoren bliver til en pointer*/
+}
+
+#logo {
+    padding: 20px;
+    height: 80px;
+    z-index: 110;
+}
+
+/*burger menu icons*/
+.menu-icons {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between; /* Fordeler ikonerne jævnt */
+    align-items: center; /* Centrerer ikonerne lodret */
+}
+
+#closeicon {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 40px;
+    cursor: pointer;
+    display: none; /* Skjult som standard */
+}
+
+#mobilnav.active #closeicon {
+    display: block; /* Viser luk-ikonet når menuen er aktiv */
+}
+
+#mobilnav.active ~ #burgericon {
+    display: none; /* Skjuler burger-ikonet når menuen er aktiv */
+}
+
+/* Burger menu */
+#mobilnav {
+    position: fixed;
+    top: 0;              
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Fuld højde af skærmen */
+    background-color: #C3DDF2;  
+    padding: 40px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer menupunkterne horisontalt */
+    justify-content: center; /* Centrerer menupunkterne lodret */
+    gap: 20px;
+    transform: translateX(100%); /* Skubber menuen ud af skærmen som standart */
+    transition: transform 0.3s ease;
+}
+
+#mobilnav.active {
+    transform: translateX(0); /* Skubber menuen ind på skærmen */
+}
+    
+/* Undermenu */
+.toggle-submenu::after {
+    content: url("images/toggle.svg"); 
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease; 
+}
+
+/* Roterer pilen når undermenuen er åben */
+.mobile-menu-item.open .toggle-submenu::after {
+    transform: rotate(180deg);
+}
+    
+.submenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+    
+.submenu a {
+    padding: 10px 0;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Viser undermenuen når menu-item har klassen "open" */
+.mobile-menu-item.open .submenu {
+    display: flex; 
+}
+
+/*social media ikoner*/
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.social-icons svg {
+    height: 25px;
+    width: auto;
+}
+
+
+/* Sjuler laptop menuen på standart */
+#laptopnav {
+    display: none;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 10%;
+    left: 30px;
+    z-index: 10;
+    text-align: left;
+}
+
+/*Laptop hero billede*/
+.laptopbillede {
+    display: none;
+}
+
+/*Mobil hero billede*/
+.mobilbillede {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+/*mobil side*/
+@media screen and (max-width: 480px) {
+
+/*Header*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+    background-color: transparent; 
+}
+
+/*Ændrer baggrundsfarven når der scrolles*/
+header.scrolled {
+    background-color: rgba(26, 26, 26, 0.25);
+}
+
+}
+
+/*Ipad*/
+@media screen and (min-width: 768px) {
+
+/*Header*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+    background-color: transparent; 
+}
+
+/*Ændrer baggrundsfarven når der scrolles*/
+header.scrolled {
+    background-color: rgba(26, 26, 26, 0.25);
+}
+
+/*Hero billede*/
+.hero-billede {
+    position: relative;
+    width: 100%;
+}
+
+.hero-billede img {
+    width: 100%;
+    height: auto;
+}
+
+/* viser laptop billede*/
+.laptopbillede {
+    display: block;
+}
+
+/*skjuler mobil billede*/
+.mobilbillede {
+    display: none;
+}
+
+.hero-text {
+    left: 70px;
+    bottom: 20%;
+    max-width: 60%;
+}
+}
+
+
+/*Laptop*/
+@media screen and (min-width: 1200px) {
+
+header {
+    padding: 10px 50px 20px 50px;
+    background-color: #F8F0E2;
+}
+
+/*bevare den gule baggrundsfarve når der scrolles*/
+header.scrolled {
+    background-color: #F8F0E2;
+}
+
+#logo {
+    height: 100px;
+    padding: 0; 
+    align-items: flex-start;
+    z-index: 1000;
+}
+ 
+#laptopnav {
+    display: flex;
+    gap: 80px;
+    padding-top: 40px;
+    z-index: 1000;   
+}
+
+#laptopnav a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: ease-in-out 0.2s;
+}
+
+.menu-text:hover{
+    color: #C8BEDF;
+}
+
+/* Dropdown */
+.menu-item {
+    position: relative;
+}
+  
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #F8F0E2;
+    min-width: 140px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    flex-direction: column;
+    transition: ease-in-out 0.2s;
+}
+  
+.menu-item:hover .dropdown {
+    display: flex;
+}
+
+.dropdown {
+    left: -10px; 
+}
+
+.dropdown a {
+    background-color: #F8F0E2;
+    padding: 10px 10px;
+    transition: ease-in-out 1s;
+}
+
+.dropdown a:hover {
+    background-color: #C8BEDF;
+    transition: ease-in-out 1s;
+}
+
+
+/*social medie ikoner*/
+.social-icons {
+    display: none;
+}
+
+/*molib nav på laptop*/
+#burgericon {
+    display: none;
+}
+  
+#mobilnav {
+    display: none;
+}
+
+/* streg under aktivt menupunkt */
+.active {
+    border-bottom: 2px solid #C8BEDF;
+}
+
+/*hero billede*/
+.hero-billede {
+    position: relative;
+    width: 100%;
+}
+  
+.hero-billede img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    left: 70px;
+    bottom: 20%;
+}
+
+.laptopbillede {
+    display: block;
+}
+  
+.mobilbillede {
+    display: none;
+}
+
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    transition: ease-in-out 0.2s;
+}
+
+.footer a:hover {
+    color:#C8BEDF;
+    transition: ease-in-out 0.2s;
+}
+
+.map iframe {
+    width: 100%;
+    height: 280px;
+    border: none;
+}
+
+.opening-list {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;      
+    width: 100%;              /* Hopper ned på næste linje når der ikke er plads */          
+}
+
+.opening-list li {
+    flex-wrap: wrap;          /* Gør det muligt at hoppe ned på næste linje */
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hearts {
+    font-size: 10px;
+}
+
+.hours h3, 
+.footer-links h3 {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.footer-links a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: inherit;              /* bruger samme farve som resten */
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 20px 0;
+    gap: 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    height: auto;
+}
+
+.socials img {
+    height: 20px;
+    width: auto;
+}
+
+.smiley {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;     /* Smiley til højre, tekst til venstre */
+    margin-top: 10px;
+}
+
+.smiley p {
+    margin: 0;
+}
+
+.smiley img {
+    width: 60px;                
+    height: auto;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 7pt;
+}
+
+@media screen and (max-width: 480px) {
+    .footer { gap: 12px; }
+}
+
+@media screen and (min-width: 768px) {
+
+    .footer-links h2 {
+        display: none;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .opening-list li {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .footer {
+        gap: 18px;
+        text-align: center;               
+        justify-items: center;            
+    }
+
+    .contact p {
+        font-size: 12pt;
+    }
+
+    .smiley {
+        order: 6;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;             
+        gap: 10px;
+    }
+
+    .copyright {
+        order: 7;
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-links h2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .footer {
+        text-align: left;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3%;
+        width: 100%;
+    }
+
+    .footer section {
+        display: flex;
+        margin: 0;
+        height: 100%;
+        justify-content: space-evenly
+    }
+
+    .footer-links {
+        gap: 23px;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .footer h3 {
+        font-size: 22px;
+    }
+
+    .smiley {
+        grid-column: 4;
+        grid-row: 1;
+        margin-top: 10px;
+        flex-direction: row;    
+        justify-content: flex-start;
+    }
+
+    .social-footer {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .copyright {
+        grid-column: 1 / 5; /* Spænd over alle kolonner */
+    }
 }
