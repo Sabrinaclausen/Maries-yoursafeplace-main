@@ -83,49 +83,49 @@ body {
 /* Generelle styles */
 
 h1, h2, h3, h4, a, span {
-font-family: 'playfair display', serif;
-text-transform: uppercase;
+    font-family: 'playfair display', serif;
+    text-transform: uppercase;
 }
 
 h2, h3, h4, p, a {
-color: #1a1a1a;
+    color: #1a1a1a;
 }
 
 h1{
-color: #FFFDF8; 
-font-size: 27px;
-text-transform: uppercase;
-margin: 0 0 20px;
+    color: #FFFDF8; 
+    font-size: 27px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
 }
 
 h2{
-font-size: 25px;
-text-transform: uppercase;
-margin: 0 0 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
 }
 
 h3{
-font-size: 20px;
-text-transform: uppercase;
-margin: 0 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
 }
 
 h4{
-font-size: 18px;
-text-transform: uppercase;
-margin: 0 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
 }
 
 p{
-font-size: 16px;
-font-family: 'source sans 3', sans-serif;
-margin: 0 0px;
+    font-size: 16px;
+    font-family: 'source sans 3', sans-serif;
+    margin: 0 0px;
 }
 
 a{
-color: #1A1A1A;
-text-decoration: none;
-font-size: 16px;
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 /* lille mobil */
@@ -330,7 +330,6 @@ header {
     width: auto;
 }
 
-
 /* Sjuler laptop menuen på standart */
 #laptopnav {
     display: none;
@@ -360,21 +359,21 @@ header {
 @media screen and (max-width: 480px) {
 
 /*Header*/
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    z-index: 1000;
-    transition: background-color 0.5s ease;
-    background-color: transparent; 
-}
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        z-index: 1000;
+        transition: background-color 0.5s ease;
+        background-color: transparent; 
+    }
 
 /*Ændrer baggrundsfarven når der scrolles*/
-header.scrolled {
-    background-color: rgba(26, 26, 26, 0.25);
-}
+    header.scrolled {
+        background-color: rgba(26, 26, 26, 0.25);
+    }
 
 }
 
@@ -382,170 +381,170 @@ header.scrolled {
 @media screen and (min-width: 768px) {
 
 /*Header*/
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    z-index: 1000;
-    transition: background-color 0.5s ease;
-    background-color: transparent; 
-}
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        z-index: 1000;
+        transition: background-color 0.5s ease;
+        background-color: transparent; 
+    }
 
 /*Ændrer baggrundsfarven når der scrolles*/
-header.scrolled {
-    background-color: rgba(26, 26, 26, 0.25);
-}
+    header.scrolled {
+        background-color: rgba(26, 26, 26, 0.25);
+    }
 
 /*Hero billede*/
-.hero-billede {
-    position: relative;
-    width: 100%;
-}
+    .hero-billede {
+        position: relative;
+        width: 100%;
+    }
 
-.hero-billede img {
-    width: 100%;
-    height: auto;
-}
+    .hero-billede img {
+        width: 100%;
+        height: auto;
+    }
 
 /* viser laptop billede*/
-.laptopbillede {
-    display: block;
-}
+    .laptopbillede {
+        display: block;
+    }
 
 /*skjuler mobil billede*/
-.mobilbillede {
-    display: none;
-}
+    .mobilbillede {
+        display: none;
+    }
 
-.hero-text {
-    left: 70px;
-    bottom: 20%;
-    max-width: 60%;
-}
+    .hero-text {
+        left: 70px;
+        bottom: 20%;
+        max-width: 60%;
+    }
 }
 
 
 /*Laptop*/
 @media screen and (min-width: 1200px) {
 
-header {
-    padding: 10px 50px 20px 50px;
-    background-color: #F8F0E2;
-}
+    header {
+        padding: 10px 50px 20px 50px;
+        background-color: #F8F0E2;
+    }
 
 /*bevare den gule baggrundsfarve når der scrolles*/
-header.scrolled {
-    background-color: #F8F0E2;
-}
+    header.scrolled {
+        background-color: #F8F0E2;
+    }
 
-#logo {
-    height: 100px;
-    padding: 0; 
-    align-items: flex-start;
-    z-index: 1000;
-}
- 
-#laptopnav {
-    display: flex;
-    gap: 80px;
-    padding-top: 40px;
-    z-index: 1000;   
-}
+    #logo {
+        height: 100px;
+        padding: 0; 
+        align-items: flex-start;
+        z-index: 1000;
+    }
+    
+    #laptopnav {
+        display: flex;
+        gap: 80px;
+        padding-top: 40px;
+        z-index: 1000;   
+    }
 
-#laptopnav a {
-    text-decoration: none;
-    font-size: 16px;
-    transition: ease-in-out 0.2s;
-}
+    #laptopnav a {
+        text-decoration: none;
+        font-size: 16px;
+        transition: ease-in-out 0.2s;
+    }
 
-.menu-text:hover{
-    color: #C8BEDF;
-}
+    .menu-text:hover{
+        color: #C8BEDF;
+    }
 
 /* Dropdown */
-.menu-item {
-    position: relative;
-}
+    .menu-item {
+        position: relative;
+    }
   
-.dropdown {
-    display: flex;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    background-color: #F8F0E2;
-    min-width: 140px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    flex-direction: column;
-    transition: ease-in-out 0.2s;
-    transform: translateY(-5px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-  
-.menu-item:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    display: flex;
-    transform: translateY(0);
-}
+    .dropdown {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        background-color: #F8F0E2;
+        min-width: 140px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        flex-direction: column;
+        transition: ease-in-out 0.2s;
+        transform: translateY(-5px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .menu-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        transform: translateY(0);
+    }
 
-.dropdown {
-    left: -10px; 
-}
+    .dropdown {
+        left: -10px; 
+    }
 
-.dropdown a {
-    padding: 10px 10px;
-    transition: background-color 0.3s ease-in-out;
-}
+    .dropdown a {
+        padding: 10px 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
 
-.dropdown a:hover {
-    background-color: #C8BEDF;
-}
+    .dropdown a:hover {
+        background-color: #C8BEDF;
+    }
 
 
 /*social medie ikoner*/
-.social-icons {
-    display: none;
-}
+    .social-icons {
+        display: none;
+    }
 
 /*molib nav på laptop*/
-#burgericon {
-    display: none;
-}
-  
-#mobilnav {
-    display: none;
-}
+    #burgericon {
+        display: none;
+    }
+    
+    #mobilnav {
+        display: none;
+    }
 
 /* streg under aktivt menupunkt */
-.active {
-    border-bottom: 2px solid #C8BEDF;
-}
+    .active {
+        border-bottom: 2px solid #C8BEDF;
+    }
 
 /*hero billede*/
-.hero-billede {
-    position: relative;
-    width: 100%;
-}
-  
-.hero-billede img {
-    width: 100%;
-    height: auto;
-}
+    .hero-billede {
+        position: relative;
+        width: 100%;
+    }
+    
+    .hero-billede img {
+        width: 100%;
+        height: auto;
+    }
 
-.hero-text {
-    left: 70px;
-    bottom: 20%;
-}
+    .hero-text {
+        left: 70px;
+        bottom: 20%;
+    }
 
-.laptopbillede {
-    display: block;
-}
-  
-.mobilbillede {
-    display: none;
-}
+    .laptopbillede {
+        display: block;
+    }
+    
+    .mobilbillede {
+        display: none;
+    }
 
 }
 

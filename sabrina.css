@@ -226,9 +226,9 @@
 
 
 @media screen and (min-width: 768px) {
-.seasonal-news-section {
-  padding: 10px;
-}
+  .seasonal-news-section {
+    padding: 10px;
+  }
 
   .seasonal-news-card {
     width: 100%; /* stort kort på iPad */
@@ -333,89 +333,88 @@
 /* Desktop */
 @media screen and (min-width: 1200px) {
 
-.seasonal-news-blob {
-  display: none;
-}
+  .seasonal-news-blob {
+    display: none;
+  }
 
-.seasonal-news-blob-desktop {
-  display: block;
-  width: 80%;
-  height: auto;
-  margin-top: 110px;
-}
+  .seasonal-news-blob-desktop {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-top: 110px;
+  }
 
-.seasonal-news-card {
-  max-width: 80%;
-  margin: 0 auto;
-}
+  .seasonal-news-card {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-.text-container {
-  margin-top: 50px;
-  max-width: 50%;
-}
+  .text-container {
+    margin-top: 50px;
+    max-width: 50%;
+  }
 
-/*event laptop*/
-.event-grid {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 50px;
-}
+  /*event laptop*/
+  .event-grid {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+  }
 
-.text-container-events {
-  margin-top: 50px;
-  max-width: 50%;
-  text-align: center;
-}
+  .text-container-events {
+    margin-top: 50px;
+    max-width: 50%;
+    text-align: center;
+  }
 
-.event-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start
-}
+  .event-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+  }
 
-/* tekst på laptop*/
+  /* tekst på laptop*/
 
-#text-container-body {
-  display: none;
-}
+  #text-container-body {
+    display: none;
+  }
 
-.text-container-about {
-  display: flex;
-  align-items: flex-start; 
-  justify-content: center;
-  align-items: center; 
-  gap: 60px;
-  max-width: 850px;
-  margin: 70px auto 5px auto;
-}
+  .text-container-about {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    align-items: center; 
+    gap: 60px;
+    max-width: 850px;
+    margin: 70px auto 5px auto;
+  }
 
-#about-extra-title {
-  display: block;
-}
+  #about-extra-title {
+    display: block;
+  }
 
-#about-extra {
-  display: block;
-}
+  #about-extra {
+    display: block;
+  }
 
-.about-me-one-mobil {
-  display: none;
-}
+  .about-me-one-mobil {
+    display: none;
+  }
 
-/*større billede på laptop*/
-.about-me-one-desktop {
-  display: block;
-}
+  /*større billede på laptop*/
+  .about-me-one-desktop {
+    display: block;
+  }
 
-.about-me-two-mobil {
-  display: none;
-}
+  .about-me-two-mobil {
+    display: none;
+  }
 
-/*større billede på laptop*/
-.about-me-two-desktop {
-  display: block;
-}
-
+  /*større billede på laptop*/
+  .about-me-two-desktop {
+    display: block;
+  }
 
 }

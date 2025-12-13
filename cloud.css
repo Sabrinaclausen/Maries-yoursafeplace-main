@@ -101,13 +101,13 @@
 @media screen and (min-width: 400px) {
 
   .cloud-laptop {
-  display: none;
-}
+    display: none;
+  }
 
-.cloud-mobil {
-  display: block;
-  width: 100%;
-}
+  .cloud-mobil {
+    display: block;
+    width: 100%;
+  }
 
 }
 
@@ -116,17 +116,17 @@
 @media screen and (min-width: 768px) {
 
   .cloud-laptop {
-  display: block;
-  width: 100%;
-}
+    display: block;
+    width: 100%;
+  }
 
-.cloud-mobil {
-  display: none;
-}
+  .cloud-mobil {
+    display: none;
+  }
 
-.images-slider-wrapper{
-  margin-bottom: 250px;
-}
+  .images-slider-wrapper{
+    margin-bottom: 250px;
+  }
 
 }
 
@@ -135,22 +135,22 @@
 /*Laptop*/
 @media screen and (min-width: 1200px) {
 
-.cloud-laptop {
-  display: block;
-  width: 100%;
-  margin-top: 50px;
-}
-    
-.cloud-mobil {
-  display: none;
-}
+  .cloud-laptop {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
+      
+  .cloud-mobil {
+    display: none;
+  }
 
-.review-content {
-  width: 40%;
-}
+  .review-content {
+    width: 40%;
+  }
 
-.review-heart {
-  bottom: 130px;
-}
+  .review-heart {
+    bottom: 130px;
+  }
 
 }
