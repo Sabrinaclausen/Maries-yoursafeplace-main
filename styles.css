@@ -227,7 +227,7 @@ header {
     cursor: pointer; /*Gør at cursoren bliver til en pointer*/
 }
 
-#logo {
+.logo {
     padding: 20px;
     height: 80px;
     z-index: 110;
@@ -439,7 +439,7 @@ header {
         background-color: #F8F0E2;
     }
 
-    #logo {
+    .logo {
         height: 100px;
         padding: 0; 
         align-items: flex-start;
