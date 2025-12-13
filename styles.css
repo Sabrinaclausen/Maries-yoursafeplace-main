@@ -470,17 +470,24 @@ header.scrolled {
 }
   
 .dropdown {
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     background-color: #F8F0E2;
     min-width: 140px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     flex-direction: column;
     transition: ease-in-out 0.2s;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
   
 .menu-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
     display: flex;
+    transform: translateY(0);
 }
 
 .dropdown {
@@ -488,14 +495,12 @@ header.scrolled {
 }
 
 .dropdown a {
-    background-color: #F8F0E2;
     padding: 10px 10px;
-    transition: ease-in-out 1s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .dropdown a:hover {
     background-color: #C8BEDF;
-    transition: ease-in-out 1s;
 }
 
 
@@ -761,6 +766,17 @@ header.scrolled {
     .social-footer {
         display: flex;
         cursor: pointer;
+    }
+
+    .social-footer svg {
+        height: 30px;
+        width: auto;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .social-footer svg:hover {
+        transform: translateY(-5px) scale(1.2);
     }
 
     .copyright {
