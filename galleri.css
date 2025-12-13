@@ -4,7 +4,6 @@
     text-align: center; /* centrerer teksten */
     width: 70%;
     margin: 50px auto 30px auto; /* centrerer teksten */
-    padding: 100px 30px 30px 30px;
 }
 
 .galleri-velkomst h2 {
@@ -25,6 +24,7 @@
     aspect-ratio: 3 / 4; 
     overflow: hidden;
     border-radius: 10px;
+
 }
 
 .galleri-img-wrapper img {
@@ -33,6 +33,7 @@
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease; /* tilføjet transition for glidende effekt */
+    cursor: pointer;
 }
 
 .galleri-img-wrapper img:hover {
@@ -44,7 +45,7 @@
 .galleri-overlay {
     position: fixed;
     inset: 0;
-    padding: 70px 0 20px 0;
+    padding: 140px 0 0 0;
     background-color: #1a1a1a50;
     backdrop-filter: blur(5px); 
     display: none;
@@ -80,6 +81,7 @@
     max-height: 80vh;
     border-radius: 10px;
     margin-bottom: 10px;
+    pointer-events: none;
 }
 
 .galleri-overlay img:hover {
@@ -88,13 +90,13 @@
 
 .galleri-overlay-close-button {
     position: absolute; /* position relative to .galleri-img-wrapper */
-    top: 10px;          /* adjust as needed */
-    right: 10px;        /* adjust as needed */
+    top: 9px;          /* adjust as needed */
+    right: 9px;        /* adjust as needed */
     background: #FAFAF8;
     border: none;
     border-radius: 0 0 0 15px;
     cursor: pointer;
-    padding: 5px;
+    padding: 9px;
     z-index: 10;
 }
 
@@ -106,6 +108,7 @@
 
 .galleri-overlay-img-caption {
     font-family: 'playfair display', serif;
+    font-size: 10pt;
     text-transform: uppercase;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -157,6 +160,7 @@
 @media screen and (min-width: 1024px) {
     .galleri-overlay-img-caption {
         max-width: 35vw;
+        font-size: 12pt;
     }
 
     .galleri-overlay-backdrop {
@@ -172,6 +176,9 @@
         height: auto;
     }
 
+    .galleri-container {
+        margin-bottom: 50px;
+    }
 }
 
 /* laptop */

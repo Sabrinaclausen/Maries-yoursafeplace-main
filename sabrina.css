@@ -8,6 +8,8 @@
 /* Kortet */
 .seasonal-news-card {
   position: relative;
+  display: flex;
+    flex-direction: column;
   max-width: 480px;
   width: 100%;
 }
@@ -24,8 +26,6 @@
   position: absolute;
   inset: 0;
   padding: 48px 32px 56px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
 }
@@ -66,8 +66,10 @@
   margin-top: 3px;
 }
 
-.button {
-  margin-top: 25px;
+.seasonal-news-card .button {
+  margin: -120px auto 0 auto;
+  width: 150px;
+  padding: 10px 0;
 }
 
 /* Desktop blob baggrunds billede */
@@ -80,6 +82,10 @@
   margin: 70px auto 20px auto;
   text-align: center;
   max-width: 330px;
+}
+
+.text-container p {
+  margin: 0 0 20px 0;
 }
 
 .text-container-about {
@@ -104,7 +110,6 @@
   flex: 0 0 100%;
   max-width: 330px;
   margin: 20px auto 20px auto;
-   
 }
 
 /* event billede */
@@ -192,100 +197,138 @@
   color: #1a1a1a;
 }
 
+.text-container-shop p {
+  margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .seasonal-news-card .button {
+    margin: -25px auto 0 auto;
+    width: 150px;
+    padding: 10px 0;
+  }
+
+  .text-container {
+    margin-top: 20px;
+  }
+}
 /* Mobil */
 @media screen and (min-width: 480px) {
 
-.seasonal-news-blob-mobile {
-  display: block;
-}
+  .seasonal-news-blob-mobile {
+    display: block;
+  }
 
-.seasonal-news-blob-desktop {
-  display: none;
-}
-
+  .seasonal-news-blob-desktop {
+    display: none;
+  }
 }
 
 
 @media screen and (min-width: 768px) {
-
-.seasonal-news-card {
-  width: 100%; /* stort kort på iPad */
-  max-width: 80%;
-  margin: 10px auto 0 auto;
+.seasonal-news-section {
+  padding: 10px;
 }
 
-/* brug desktop-blob på iPad */
-.seasonal-news-blob {
-  display: none;
+  .seasonal-news-card {
+    width: 100%; /* stort kort på iPad */
+    max-width: 80%;
+    margin: 10px auto 0 auto;
+  }
+
+  /* brug desktop-blob på iPad */
+  .seasonal-news-blob {
+    display: none;
+  }
+
+  .seasonal-news-blob-desktop {
+    display: block;
+    width: 100%; /* fylder hele kortets bredde */
+    height: auto;
+    margin: 120px auto 0 auto;
+    padding: 0;
+  }
+
+  .seasonal-news-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 48px 56px; 
+  }
+
+  .seasonal-news-card .button {
+    width: 150px;
+    padding: 10px 0;
+    margin: 20px auto;
+  }
+
+  .text-container {
+    margin-top: 10px;
+    max-width: 50%;
+  }
+
+  .text-container p {
+    margin: 0 0 30px 0;
+  }
+
+  .button {
+    margin-top: 0px;
+  }
+
+  /*events iPad*/
+  .event-grid {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 0 30px 0 30px; 
+  }
+
+  .event-card {
+    width: calc(50% - 10px);
+    margin: 0 0 10px 0;
+  }
+
+  .event-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+  }
+
+  .text-container-events{
+    display: block;
+    margin: 150px auto 0 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+  /*om mig ipad*/
+  .text-container-about{
+    margin: 50px auto 0 auto;
+    text-align: center;
+    max-width: 50%;
+  }
+
+  .about-me-one-mobil{
+    width: 80%;
+  }
+
+  .about-me-two{
+    width: 80%;
+  }
 }
 
-.seasonal-news-blob-desktop {
-  display: block;
-  width: 100%; /* fylder hele kortets bredde */
-  height: auto;
-  margin: 120px auto 0 auto;
+@media screen and (min-width: 1024px) {
+  .seasonal-news-card .button {
+    margin: -90px auto 40px auto;
+    width: 150px;
+    padding: 10px 0;
+  }
+
+  .seasonal-news-card-content {
+    margin: auto 70px;
+  }
 }
-
-.seasonal-news-card-content {
-  padding: 48px 48px 56px; 
-}
-
-.text-container {
-  margin-top: 150px;
-  max-width: 50%;
-}
-
-.button {
-  margin-top: 0px;
-}
-
-/*events iPad*/
-.event-grid {
-  display: flex;
-  flex-direction: row; 
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 0 30px 0 30px; 
-}
-
-.event-card {
-  width: calc(50% - 10px);
-  margin: 0 0 10px 0;
-}
-
-.event-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start
-}
-
-.text-container-events{
-  display: block;
-  margin: 150px auto 0 auto;
-  max-width: 50%;
-  text-align: center;
-}
-
-/*om mig ipad*/
-.text-container-about{
-  margin: 70px auto 0 auto;
-  text-align: center;
-  max-width: 50%;
-}
-
-.about-me-one-mobil{
-  width: 80%;
-}
-
-.about-me-two{
-  width: 80%;
-}
-
-}
-
-
-
 
 /* Desktop */
 @media screen and (min-width: 1200px) {

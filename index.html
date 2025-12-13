@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header+footer.css">
     <link rel="stylesheet" href="sabrina.css">
-    <link rel="stylesheet" href="hearts.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="cloud.css">
     <script src="header.js" defer></script>
-    <title>Header</title>
+    <script src="cloud.js" defer></script>
+    <title>Maries - Your safe place</title>
 </head>
 
 <body>
@@ -112,7 +114,7 @@
                 <a href="#">Hos Marie</a>
                 <div class="dropdown">
                     <a href="events.html">Events</a>
-                    <a class="active" href="shop.html">Shop</a>
+                    <a href="shop.html">Shop</a>
                     <a href="galleri.html">Galleri</a>
                 </div>
             </div>
@@ -130,29 +132,235 @@
     </header>
 
     <main>
-
-        <section class="text-container-shop">
-            <h1>Coming soon</h1>
-            <p>
-                Glæd dig til at shoppe alle vores produkter online 
-            </p>
-            <a class="button button-shine-btn" href="#">forside</a>
-        </section>
-
-        <div class="heart-wrapper">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
-            <img class="heart" src="images/pink-heart.svg">
+        <div class="hero-billede">
+            <div>
+                <img class="laptopbillede" src="images/forside-hero-desktop.jpg" alt="Desktop billede">
+            </div>
+            <div>
+                <img class="mobilbillede" src="images/forside-hero-mobil.jpg" alt="Mobil billede">
+            </div> 
+            <div class="hero-text">
+                <h1>Maries<br>
+                -Your safe place</h1>
+            </div>    
         </div>
 
+            <div class="text-banner">
+        <div class="track">
+          <div class="content">
+            <h2>Thise</h2>
+            <h2>Martinys</h2>
+            <h2>Hancock</h2>
+            <h2>Berta</h2>
+            <h2>Europa Kaffe</h2>
+          </div>
+      
+          <div class="content">
+            <h2>Thise</h2>
+            <h2>Martinys</h2>
+            <h2>Hancock</h2>
+            <h2>Berta</h2>
+            <h2>Europa Kaffe</h2>
+          </div>
+        </div>
+      </div>
+
+        <section class="seasonal-news-section">
+            <div class="seasonal-news-card">
+    
+                <img class="seasonal-news-blob" src="images/mobil-blop.png" alt="lyserød baggrunds farve">
+                <img class="seasonal-news-blob-desktop" src="images/blop-pc-f2ceeb.svg" alt="lyserød baggrunds farve" preserveAspectRatio="none">
+
+    
+                <div class="seasonal-news-card-content" >
+                    <img class="seasonal-news-cup" src="images/seasonal-news-cup.png" alt="Kaffekop">
+                    <h2>Nyhed på menuen!</h2>
+                    <p>
+                        Sig hej til efterårets hyggeligste favorit:
+                    </p>
+
+                    <h3>✨Pumpkin spice latte✨</h3>
+
+                    <p>
+                        <strong>En varm og krydret drøm med:</strong>
+                    </p>
+
+                    <ul class="seasonal-news-list">
+                        <li>
+                            <img class="heart-icon" src="images/hjerte-icon.png" alt="Hvidt hjerte ikon">
+                            Hjemmelavet græskarpuré
+                            </li>
+                        <li>
+                            <img class="heart-icon" src="images/hjerte-icon.png" alt="Hvidt hjerte ikon">
+                            Hjemmelavet chai-sirup
+                        </li>
+                        <li>
+                            <img class="heart-icon" src="images/hjerte-icon.png" alt="Hvidt hjerte ikon">
+                            Mælk fra Thise
+                        </li>
+                        <li>
+                        <img class="heart-icon" src="images/hjerte-icon.png" alt="Hvidt hjerte ikon">
+                        Pisket fløde &amp; vaniljecreme på toppen
+                        </li>
+                    </ul>
+
+                    <p>
+                        Perfekt til kølige dage, efterårsstemning og når du vil
+                        forkæle dig selv med lidt ekstra hygge
+                    </p>
+
+                   
+                </div>
+
+                <a href="menu.html" class="button button-shine-btn">SE MENUKORT</a>
+            </div>
+        </section>
+
+        <section class="text-container">
+            <h2>Your safe place</h2>
+            <p>
+                Her er vi ikke bare en kaffebar, men et frirum. 
+                Et sted hvor der er plads til alle. 
+                <br><br>
+                Vi drømmer om at skabe en atmosfære, der føles som at sidde hjemme hos en god ven. 
+                Derfor er kaffebaren fyldt med små ting og minder fra mit eget barndomshjem, 
+                farver, nipsting og andre finurligheder. 
+                Alt det, der ikke kan købes, men som skabes gennem historier og kærlighed. 
+                Dette håber jeg skaber et hjemmeligt og tryg rum.
+            </p>
+            <a href="om-mig.html" class="button button-shine-btn">OM MIG</a>
+        </section>
     </main>
+
+     <div class="slideshow-container">
+
+        <img class="cloud-mobil" src="images/cloud.svg" alt="Hvid sky baggrund">
+        <img class="cloud-laptop" src="images/cloud-laptop.svg" alt="Hvid sky baggrund">
+
+        <img class="arrow-left" src="images/arrow-left.svg" alt="Forrige anmeldelse" onclick="plusSlides(-1)">
+        <img class="arrow-right" src="images/arrow-right.svg" alt="Næste anmeldelse" onclick="plusSlides(1)">
+
+        <!-- SLIDE 1 -->
+        <div class="review-card">
+            <div class="review-content">
+                <h2 class="review-title">Anmeldelser</h2>
+                <h3 class="review-name">Nina</h3>
+
+                <div class="review-stars">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                </div>
+
+                <p class="review-text">
+                The owner is incredibly nice and the atmosphere is also really nice. 
+                Very cozy. The pastries are amazing and the coffee tastes really good. 
+                Would definitely recommend. Small cute cafe.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="review-card">
+            <div class="review-content">
+                <h2 class="review-title">Anmeldelser</h2>
+                <h3 class="review-name">Cecilie</h3>
+
+                <div class="review-stars">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                </div>
+
+                <p class="review-text">
+                Jeg valgte at få min første Matcha islatte her i dag og havde 
+                store forventninger efter alt den hype 😄 
+                Den smagte fantastisk og jeg var så tilfreds med servicen og 
+                virkelig hyggelig og rolig stemning! Jeg kommer igen!
+                </p>
+
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="review-card">
+            <div class="review-content">
+                <h2 class="review-title">Anmeldelser</h2>
+                <h3 class="review-name">Rebekka</h3>
+
+                <div class="review-stars">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                </div>
+
+                <p class="review-text">
+                Lille hyggelig café.
+                Deres bagværk er ikke så godt præsenteret desværre men deres kaffe 
+                er virkelig god
+                </p>
+
+            </div>
+        </div>
+
+            <!-- SLIDE 4 -->
+        <div class="review-card">
+            <div class="review-content">
+                <h2 class="review-title">Anmeldelser</h2>
+                <h3 class="review-name">Margaux</h3>
+
+                <div class="review-stars">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                </div>
+
+                <p class="review-text">
+                One of the best coffee in Aarhus with one of the best Chai latte I’ve tried. 
+                The owner is really nice and the place is cute and cozy, I loved it!
+                </p>
+
+            </div>
+        </div>
+
+            <!-- SLIDE 5 -->
+        <div class="review-card">
+            <div class="review-content">
+                <h2 class="review-title">Anmeldelser</h2>
+                <h3 class="review-name">Julia</h3>
+
+                <div class="review-stars">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                    <img src="images/review-star.svg" alt="anmeldelsesstjerne">
+                </div>
+
+                <p class="review-text">
+                Very cosy and cute cafe with a homey feel. 
+                One of my new favorite places in Aarhus!
+                </p>
+
+            </div>
+        </div>
+        
+        <div class="review-heart">
+            <img class="dot-heart active" src="images/review-heart.svg" alt="slide 1" onclick="currentSlide(1)">
+            <img class="dot-heart" src="images/review-heart.svg" alt="slide 2" onclick="currentSlide(2)">
+            <img class="dot-heart" src="images/review-heart.svg" alt="slide 3" onclick="currentSlide(3)">
+            <img class="dot-heart" src="images/review-heart.svg" alt="slide 4" onclick="currentSlide(4)">
+            <img class="dot-heart" src="images/review-heart.svg" alt="slide 5" onclick="currentSlide(5)">
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -263,5 +471,4 @@
     </footer>
 
 </body>
-
 </html>
