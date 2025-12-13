@@ -17,6 +17,7 @@
 .kontakt-overlay.active {
     display: flex;
     opacity: 1;
+    z-index: 1002;
 }
 
 .kontakt-overlay.active .kontakt-container {

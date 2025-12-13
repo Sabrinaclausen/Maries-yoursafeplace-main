@@ -284,6 +284,10 @@ header {
 #mobilnav.active {
     transform: translateX(0); /* Skubber menuen ind på skærmen */
 }
+
+#mobilnav .activemb {
+    border-bottom: 2px solid #C8BEDF;
+}
     
 /* Undermenu */
 .toggle-submenu::after {

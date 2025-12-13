@@ -293,6 +293,20 @@
 
 /* MOBIL */
 
+@media screen and (max-width: 390px) {
+    .item span, .tilvalg span, .left {
+        font-size: 9pt;
+    }
+
+    .item p {
+        font-size: 8pt;
+    }
+
+    .small-note {
+        font-size: 8pt;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .mob-btn {
         width: 70px;
